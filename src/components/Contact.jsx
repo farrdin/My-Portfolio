@@ -1,51 +1,39 @@
 const Contact = () => {
-  // Static contact information
-  const contactInformation = [
-    {
-      icon: "uil uil-phone",
-      title: "Call Me",
-      subtitle: "+123 456 789",
-    },
-    {
-      icon: "uil uil-envelope",
-      title: "Email",
-      subtitle: "example@example.com",
-    },
-    {
-      icon: "uil uil-map-marker",
-      title: "Location",
-      subtitle: "1234 Street Name, City, Country",
-    },
-  ];
-
-  const title = "Get in Touch";
-  const subTitle = "I'd love to hear from you";
-
   return (
     <section id="contact" className="py-16 bg-gray-100">
       <div className="text-center mb-12">
-        <h2 className="text-3xl font-bold">{title}</h2>
-        <p className="text-lg text-gray-600 mt-2">{subTitle}</p>
+        <h2 className="text-3xl font-bold">CONTACT ME</h2>
+        <p className="text-lg text-gray-600 mt-2">Get in touch</p>
       </div>
 
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
-        {/* Contact Information */}
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-4 w-[70%]">
         <div className="flex flex-col space-y-6">
-          {contactInformation.map((info, index) => (
-            <div key={index} className="flex items-center">
-              <i className={`${info.icon} text-4xl text-blue-500 mr-4`}></i>
-              <div>
-                <h3 className="text-xl font-semibold">{info.title}</h3>
-                <span className="text-gray-600">{info.subtitle}</span>
-              </div>
+          <div className="flex items-center">
+            <i className="uil uil-phone text-4xl text-blue-500 mr-4"></i>
+            <div>
+              <h3 className="text-xl font-semibold">Call Me</h3>
+              <span className="text-gray-600">+880 1938903874</span>
             </div>
-          ))}
+          </div>
+
+          <div className="flex items-center">
+            <i className="uil uil-envelope text-4xl text-blue-500 mr-4"></i>
+            <div>
+              <h3 className="text-xl font-semibold">Email</h3>
+              <span className="text-gray-600">Fardinahmed.dev@gmail.com</span>
+            </div>
+          </div>
+
+          <div className="flex items-center">
+            <i className="uil uil-map-marker text-4xl text-blue-500 mr-4"></i>
+            <div>
+              <h3 className="text-xl font-semibold">Location</h3>
+              <span className="text-gray-600">Dhaka,Bangladesh</span>
+            </div>
+          </div>
         </div>
 
-        {/* Contact Form */}
-        <form
-          className="bg-white p-6 rounded-lg shadow-lg"
-        >
+        <form className="bg-white p-6 rounded-lg shadow-lg">
           <div className="grid grid-cols-1 gap-6 mb-4">
             <div>
               <label className="block text-sm font-medium text-gray-700">

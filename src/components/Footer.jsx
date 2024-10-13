@@ -9,7 +9,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="mt-10 bg-gray-800 p-6 md:p-8">
+    <footer className=" bg-gray-800 p-6 md:p-8">
       <div className="mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 w-full md:w-[70%]">
         <div className="flex flex-col">
           <h1 className="text-2xl text-yellow-300 mb-2">Fardin Ahmed Alif</h1>
