@@ -1,22 +1,22 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 import SectionTitle from "../Hooks/SectionTitle";
 
 const Qualification = () => {
   const [activeSection, setActiveSection] = useState("education");
-  const contactRef = useRef(null); // Create a ref for the contact section
 
   const handleTabClick = (section) => {
     setActiveSection(section);
   };
 
   const handleScrollToContact = () => {
-    if (contactRef.current) {
-      contactRef.current.scrollIntoView({ behavior: "smooth" });
+    const contactSection = document.getElementById("contact");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   return (
-    <section className="py-16 bg-gray-50" id="qualification">
+    <section className="py-16 bg-gray-100" id="qualification">
       <SectionTitle
         title="My Qualifications"
         subTitle="Check my qualifications"
@@ -106,12 +106,15 @@ const Qualification = () => {
             Why Should You Hire Me?
           </h2>
           <p className="text-gray-700 mb-6">
-            I am confident that my full-stack web development experience and
-            eagerness to learn quickly will make me a valuable asset to any
-            team. I am dedicated to building scalable and efficient solutions
-            that enhance user experiences. My ability to quickly grasp new
-            technologies and frameworks allows me to stay adaptable in a
-            fast-evolving tech landscape.
+            With hands-on experience in full-stack web development, I am
+            passionate about building responsive and scalable applications. My
+            proficiency in technologies like React, Node.js, and MongoDB,
+            combined with my eagerness to learn quickly, equips me to adapt and
+            contribute effectively to any team. I thrive in collaborative
+            environments and am dedicated to crafting efficient, user-friendly
+            solutions that enhance business growth. Whether its working on
+            innovative projects or solving complex challenges, I am driven by a
+            desire to make a meaningful impact through technology.
           </p>
           <button
             onClick={handleScrollToContact}
@@ -121,18 +124,6 @@ const Qualification = () => {
           </button>
         </div>
       </div>
-
-      {/* Contact Section */}
-      <section
-        ref={contactRef} // Reference for the contact section
-        id="contact"
-        className="py-16 bg-gray-100 mt-16"
-      >
-        <h2 className="text-center text-3xl font-bold text-blue-600">
-          Contact Me
-        </h2>
-        {/* Add your contact form or details here */}
-      </section>
     </section>
   );
 };

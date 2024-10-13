@@ -37,7 +37,7 @@ const MySkills = () => {
   ];
 
   return (
-    <section id="skills" className="skills section py-12 bg-gray-50">
+    <section id="skills" className="skills section py-12 ">
       <SectionTitle title="My Skills" subTitle="Technical Proficiencies" />
       <div className="skills__container container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 px-6">
         {skills.map((skill, index) => (
